@@ -1,4 +1,4 @@
-#Parent class for player and enemies
+# Parent class for player and enemies
 class Char:
     def __init__(self, hp, attack, magic, defence):
         self.hp = hp
@@ -34,10 +34,24 @@ class Enemy(Char):
         print(self.name + " took " + str(dmg) + " damage!")
         print("Current HP: " + str(self.hp))
 
-p = Player(10, 0, 0, 0, 1)
-p.takeDamage(3)
-p.showstats()
+# id = card id
+class Card:
+    def __init__(self, id, name, hp, attack, shield):
+        self.id = id
+        self.name = name
+        self.hp = hp
+        self.attack = attack
+        self.shield = shield
 
-e = Enemy(5, 2, 1, 1, 1, "Slime")
-e.takeDamage(2)
-e.showstats()
+
+
+def main():
+    p = Player(10, 0, 0, 0, 1)
+    p.takeDamage(3)
+    p.showstats()
+
+    e = Enemy(5, 2, 1, 1, 1, "Slime")
+    e.takeDamage(2)
+    e.showstats()
+
+main()
