@@ -1,3 +1,14 @@
+# Import modules
+
+import sys
+import random
+import math
+import os
+import getopt
+import pygame
+from socket import *
+from pygame.locals import *
+
 # Parent class for player and enemies
 class Char:
     def __init__(self, hp, attack, magic, defence):
